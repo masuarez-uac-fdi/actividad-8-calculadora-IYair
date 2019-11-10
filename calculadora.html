@@ -3,9 +3,77 @@
 <html lang="es">
 <head>
 	<title>Calculadora</title>
-    <link rel="stylesheet" type="text/css" href="Estilo.css">
+    <link rel="stylesheet" href="Estilo.css"/>
+    <script src="jquery-3.4.1.min.map"></script>
+    <script>
+        var cantidad = "";
+        var signo_op = "";
+        var calculo = false;
+        var cant1 = 0;
+        var cant2 = 0;
+        function escribir(num) {
+            cantidad += num;
+            $("#resultado").val(cantidad);
+            if (calculo == false){
+                cant1 = parseFloat(cantidad);
+            }
+            else{
+                cant2 = parseFloat(cantidad);
+            }
+        }
+        function signo(signo) {
+            switch (signo) {
+                case "suma":
+                    signo_op = "suma";
+                    break;
+                    case "resta":
+                        signo_op = "resta";
+                        break;
+                        case "divicion":
+                            signo_op = "divicion";
+                            break;
+                            case "producto":
+                                signo_op = "producto";
+                                break;
+            }
+            alert(signo_op);
+            cantidad = "";
+            calculo = true;
+        }
+
+    </script>
 </head>
-<body>
-    <h1>Hola Mundo</h1>
+<body>h1>Calculadora</h1>
+    <table align ="center">
+        <tr>
+            <td colspan="4"><label for="resultado"></label><input type="text" id="resultado" class="form-control" disabled placeholder="Escriba usando los botones"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="CE" class="btn btn-warning form-control" onclick="location.reload()"></td>
+            <td><input type="button" value="/" class="btn btn-primary form-control" onclick="signo('dividir')"></td>
+            <td><input type="button" value="*" class="btn btn-primary from-control" onclick="signo('multiplicar')"></td>
+            <td><input type="button" value="-" class="btn btn-primary form-control" onclick="signo('restar')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" class="btn btn-success form-control" onclick="escribir(7)"></td>
+            <td><input type="button" value="8" class="btn btn-success form-control" onclick="escribir(8)"></td>
+            <td><input type="button" value="9" class="btn btn-success form-control" onclick="escribir(9)"></td>
+            <td rowspan="2"><input type="button" value="+" class="btn btn-primary from-control" onclick="signo('sumar')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" class="btn btn-success form-control" onclick="escribir(4)"></td>
+            <td><input type="button" value="5" class="btn btn-success form-control" onclick="escribir(5)"></td>
+            <td><input type="button" value="6" class="btn btn-success form-control" onclick="escribir(6)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" class="btn btn-success form-control" onclick="escribir(1)"></td>
+            <td><input type="button" value="2" class="btn btn-success form-control" onclick="escribir(2)"></td>
+            <td><input type="button" value="3" class="btn btn-success form-control" onclick="escribir(3)"></td>
+            <td rowspan="2"><input id="res" type="button" value="=" class="btn btn-primary from-control" onclick=""></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="button" value="0" class="btn btn-success form-control" onclick="escribir(0)"></td>
+        </tr>
+    </table>
 </body>
 </html>
