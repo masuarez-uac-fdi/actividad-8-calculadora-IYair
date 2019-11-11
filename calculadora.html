@@ -82,22 +82,22 @@
     </script>
 </head>
 <body>
-<h1>Calculadora</h1>
+<p><a href="">Calculadora</a></p>
     <table class="tabla">
         <tr>
-            <td colspan="4"><input type="text" id="resultado" class="form-control" disabled placeholder="Escriba usando los botones"/></td>
+            <td colspan="4"><input type="text" id="resultado" class="textview" disabled placeholder="Escriba usando los botones"/></td>
         </tr>
         <tr>
             <td><input type="button" value="CE" class="btn btn-warning form-control" onclick="location.reload()"></td>
             <td><input type="button" value="/" class="btn btn-primary form-control" onclick="signo('division')"></td>
-            <td><input type="button" value="*" class="btn btn-primary from-control" onclick="signo('producto')"></td>
+            <td><input type="button" value="x" class="btn btn-primary from-control" onclick="signo('producto')"></td>
             <td><input type="button" value="-" class="btn btn-primary form-control" onclick="signo('resta')"></td>
         </tr>
         <tr>
             <td><input type="button" value="7" class="btn btn-success form-control" onclick="escribe(7)"></td>
             <td><input type="button" value="8" class="btn btn-success form-control" onclick="escribe(8)"></td>
             <td><input type="button" value="9" class="btn btn-success form-control" onclick="escribe(9)"></td>
-            <td rowspan="2"><input type="button" value="+" class="btn btn-primary from-control" onclick="signo('suma')"></td>
+            <td rowspan="2"><input id="sum" type="button" value="+" class="btn btn-primary from-control" onclick="signo('suma')"></td>
         </tr>
         <tr>
             <td><input type="button" value="4" class="btn btn-success form-control" onclick="escribe(4)"></td>
@@ -111,7 +111,8 @@
             <td rowspan="2"><input id="res" type="button" value="=" class="btn btn-primary from-control" onclick="calcular()"></td>
         </tr>
         <tr>
-            <td colspan="3"><input type="button" value="0" class="btn btn-success form-control" onclick="escribe(0)"></td>
+            <td colspan="2"><input id="cero" type="button" value="0" class="btn btn-success form-control" onclick="escribe(0)"></td>
+            <td colspan="1"><input type="button" value="." class="btn btn-success form-control" onclick="escribe('.')"></td>
         </tr>
     </table>
 </body>
