@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="apachi">
+    <serverData>
+      <paths name="apachi">
+        <serverdata>
+          <mappings>
+            <mapping deploy="calculadora.html" local="$PROJECT_DIR$/calculadora.html" web="actividad-8-calculadora-IYair/calculadora.html" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

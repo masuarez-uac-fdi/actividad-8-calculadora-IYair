@@ -1,1 +1,16 @@
-table
+*{
+
+}
+body{
+}
+.tabla{
+    position: absolute;
+    z-index: 11;
+    left: 43%;
+    top: 72px;
+    overflow: auto;
+    visibility: visible;
+}
+h1{
+    text-align: center;
+}
